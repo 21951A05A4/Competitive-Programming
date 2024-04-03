@@ -1,5 +1,4 @@
-1.count and say 
-
+#1.count and say 
 class Solution:
     def countAndSay(self, n: int) -> str:
         j=1
@@ -18,8 +17,7 @@ class Solution:
             j+=1
         return s
 
-3.Group Anagrams
-
+#2.Group Anagrams
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         m={}
@@ -34,8 +32,7 @@ class Solution:
                 m[y].append(i)
         return m.values()
 
-4. Evaluate reverse polish Notation
-
+#3. Evaluate reverse polish Notation
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
         stack=[]
@@ -56,7 +53,7 @@ class Solution:
                 stack.append(int(op))
         return stack.pop()
 
-5.Longest common prefix
+#4.Longest common prefix
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if len(strs)<2:
