@@ -1,4 +1,4 @@
-1.Construct Binary Tree from Preorder and inorder Traversal. 
+#1.Construct Binary Tree from Preorder and inorder Traversal. 
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -17,7 +17,7 @@ class Solution:
         root.right=self.buildTree(preorder[mid+1:],inorder[mid+1:])
         return root
 
-2.Construct Binary Tree from Inorder and Postorder traversal. 
+#2.Construct Binary Tree from Inorder and Postorder traversal. 
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -36,7 +36,7 @@ class Solution:
         root.right=self.buildTree(inorder[mid+1:],postorder[mid:-1])
         return root
 
-3.Convert Sorted Array to Binary search Tree.
+#3.Convert Sorted Array to Binary search Tree.
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -54,7 +54,7 @@ class Solution:
         root.right=self.sortedArrayToBST(nums[mid+1:])
         return root
 
-4.Convert Sorted List to Binary search Tree.
+#4.Convert Sorted List to Binary search Tree.
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -88,7 +88,7 @@ class Solution:
             return root
         return convertToBST(head,None)
 
-5.Construct Binary Tree from Preorder and Postorder Traversal.
+#5.Construct Binary Tree from Preorder and Postorder Traversal.
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -109,7 +109,7 @@ class Solution:
         root.right=self.constructFromPrePost(preorder[left_subtree_size+1:],postorder[left_subtree_size:-1])
         return root
 
-6. Maximum Sum Circular Subarray.
+#6. Maximum Sum Circular Subarray.
 
 class Solution:
     def maxSubarraySumCircular(self, nums: List[int]) -> int:
@@ -123,8 +123,8 @@ class Solution:
         total_sum=sum(nums)
         max_wrap=total_sum+ kadane([-x for x in nums])
         return max(max_linear,max_wrap) if max_wrap!=0 else max_linear
-7.Kadane ALgorithm
-
+        
+#7.Kadane ALgorithm
 def kadane(A):
     max_current=max_global=A[0]
     for i in range(1,len(A)):
